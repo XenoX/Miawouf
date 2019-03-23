@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		D52F012B2246D9AA00B7E4D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52F012A2246D9AA00B7E4D2 /* AppDelegate.swift */; };
-		D52F012D2246D9AA00B7E4D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52F012C2246D9AA00B7E4D2 /* ViewController.swift */; };
 		D52F01302246D9AA00B7E4D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D52F012E2246D9AA00B7E4D2 /* Main.storyboard */; };
 		D52F01322246D9AD00B7E4D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D52F01312246D9AD00B7E4D2 /* Assets.xcassets */; };
 		D52F01352246D9AD00B7E4D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D52F01332246D9AD00B7E4D2 /* LaunchScreen.storyboard */; };
 		D52F01402246D9AD00B7E4D2 /* MiawoufTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52F013F2246D9AD00B7E4D2 /* MiawoufTests.swift */; };
 		D52F014B2246D9AD00B7E4D2 /* MiawoufUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52F014A2246D9AD00B7E4D2 /* MiawoufUITests.swift */; };
+		D52F015C2246DC6700B7E4D2 /* Races.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52F015B2246DC6600B7E4D2 /* Races.swift */; };
+		D52F015E2246EBBC00B7E4D2 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52F015D2246EBBC00B7E4D2 /* WelcomeViewController.swift */; };
+		D52F01602246F73B00B7E4D2 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52F015F2246F73B00B7E4D2 /* FormViewController.swift */; };
+		D52F01622246F74500B7E4D2 /* SuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52F01612246F74500B7E4D2 /* SuccessViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +39,6 @@
 /* Begin PBXFileReference section */
 		D52F01272246D9AA00B7E4D2 /* Miawouf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Miawouf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D52F012A2246D9AA00B7E4D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D52F012C2246D9AA00B7E4D2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D52F012F2246D9AA00B7E4D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D52F01312246D9AD00B7E4D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D52F01342246D9AD00B7E4D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +49,10 @@
 		D52F01462246D9AD00B7E4D2 /* MiawoufUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MiawoufUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D52F014A2246D9AD00B7E4D2 /* MiawoufUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiawoufUITests.swift; sourceTree = "<group>"; };
 		D52F014C2246D9AD00B7E4D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D52F015B2246DC6600B7E4D2 /* Races.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Races.swift; sourceTree = "<group>"; };
+		D52F015D2246EBBC00B7E4D2 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		D52F015F2246F73B00B7E4D2 /* FormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
+		D52F01612246F74500B7E4D2 /* SuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,11 +103,10 @@
 		D52F01292246D9AA00B7E4D2 /* Miawouf */ = {
 			isa = PBXGroup;
 			children = (
+				D52F015A2246D9D700B7E4D2 /* Model */,
+				D52F01592246D9D200B7E4D2 /* View */,
+				D52F01582246D9C800B7E4D2 /* Controller */,
 				D52F012A2246D9AA00B7E4D2 /* AppDelegate.swift */,
-				D52F012C2246D9AA00B7E4D2 /* ViewController.swift */,
-				D52F012E2246D9AA00B7E4D2 /* Main.storyboard */,
-				D52F01312246D9AD00B7E4D2 /* Assets.xcassets */,
-				D52F01332246D9AD00B7E4D2 /* LaunchScreen.storyboard */,
 				D52F01362246D9AD00B7E4D2 /* Info.plist */,
 			);
 			path = Miawouf;
@@ -123,6 +128,34 @@
 				D52F014C2246D9AD00B7E4D2 /* Info.plist */,
 			);
 			path = MiawoufUITests;
+			sourceTree = "<group>";
+		};
+		D52F01582246D9C800B7E4D2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D52F015D2246EBBC00B7E4D2 /* WelcomeViewController.swift */,
+				D52F015F2246F73B00B7E4D2 /* FormViewController.swift */,
+				D52F01612246F74500B7E4D2 /* SuccessViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D52F01592246D9D200B7E4D2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D52F012E2246D9AA00B7E4D2 /* Main.storyboard */,
+				D52F01312246D9AD00B7E4D2 /* Assets.xcassets */,
+				D52F01332246D9AD00B7E4D2 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D52F015A2246D9D700B7E4D2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D52F015B2246DC6600B7E4D2 /* Races.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,8 +289,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D52F012D2246D9AA00B7E4D2 /* ViewController.swift in Sources */,
+				D52F015E2246EBBC00B7E4D2 /* WelcomeViewController.swift in Sources */,
 				D52F012B2246D9AA00B7E4D2 /* AppDelegate.swift in Sources */,
+				D52F01602246F73B00B7E4D2 /* FormViewController.swift in Sources */,
+				D52F01622246F74500B7E4D2 /* SuccessViewController.swift in Sources */,
+				D52F015C2246DC6700B7E4D2 /* Races.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="z6K-Fo-iMz">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="zC0-WM-hig">
+            <objects>
+                <navigationController id="z6K-Fo-iMz" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="DbZ-mR-JBr">
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.67441487312316895" green="0.31048563122749329" blue="0.5448460578918457" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.15881779789924622" green="0.69526034593582153" blue="0.79280287027359009" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="z3y-0a-fdP" kind="relationship" relationship="rootViewController" id="kCf-7V-LIY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xfn-nO-ed0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-369" y="110"/>
+        </scene>
+        <!--Welcome View Controller-->
+        <scene sceneID="lwS-Dd-aOK">
+            <objects>
+                <viewController id="z3y-0a-fdP" userLabel="Welcome View Controller" customClass="WelcomeViewController" customModule="Miawouf" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Yyu-nV-egT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="Miawouf" translatesAutoresizingMaskIntoConstraints="NO" id="cLh-n7-Agq">
+                                <rect key="frame" x="89.666666666666686" y="105" width="235" height="67"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="cLh-n7-Agq" secondAttribute="height" multiplier="235:67" id="baJ-h2-JkI"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q4V-0R-2Hi">
+                                <rect key="frame" x="86" y="457" width="242" height="229"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Q4V-0R-2Hi" secondAttribute="height" multiplier="242:229" id="ceX-oh-hf6"/>
+                                </constraints>
+                                <state key="normal" image="Paw"/>
+                                <connections>
+                                    <segue destination="mvv-ei-cfo" kind="show" id="4bL-u5-tKs"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.80968528985977173" green="0.94177258014678955" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="cLh-n7-Agq" firstAttribute="centerX" secondItem="Yyu-nV-egT" secondAttribute="centerX" id="0U2-ow-Bs8"/>
+                            <constraint firstItem="Q4V-0R-2Hi" firstAttribute="centerX" secondItem="Yyu-nV-egT" secondAttribute="centerX" id="9Lu-iF-5ph"/>
+                            <constraint firstItem="cLh-n7-Agq" firstAttribute="top" secondItem="u1E-0i-Gub" secondAttribute="top" constant="41" id="boJ-ou-cEz"/>
+                            <constraint firstItem="u1E-0i-Gub" firstAttribute="bottom" secondItem="Q4V-0R-2Hi" secondAttribute="bottom" constant="50" id="rb8-84-DFr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="u1E-0i-Gub"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Welcome" id="5Ig-Ao-2I9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GJS-xF-gx7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="498" y="113"/>
+        </scene>
+        <!--Success View Controller-->
+        <scene sceneID="YNI-KD-kUv">
+            <objects>
+                <viewController id="3J4-kd-1zy" userLabel="Success View Controller" customClass="SuccessViewController" customModule="Miawouf" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5kN-MV-5n9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qHT-AI-6DW">
+                                <rect key="frame" x="16" y="20" width="382" height="696"/>
+                                <string key="text">Wouf ! 
+
+Vous avez bien été ajouté à notre base de données ! Nous vous enverrons un SMS dès que nous avons une âme soeur à vous proposer !</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" red="0.1588177979" green="0.69526034589999997" blue="0.79280287029999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.71764705880000002" green="0.84313725490000002" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="DmM-xL-pUa" firstAttribute="trailing" secondItem="qHT-AI-6DW" secondAttribute="trailing" constant="16" id="WBz-9U-cVs"/>
+                            <constraint firstItem="qHT-AI-6DW" firstAttribute="leading" secondItem="DmM-xL-pUa" secondAttribute="leading" constant="16" id="dkJ-5N-jbF"/>
+                            <constraint firstItem="DmM-xL-pUa" firstAttribute="bottom" secondItem="qHT-AI-6DW" secondAttribute="bottom" constant="20" id="dr9-48-Yy1"/>
+                            <constraint firstItem="qHT-AI-6DW" firstAttribute="top" secondItem="DmM-xL-pUa" secondAttribute="top" id="epg-bJ-wXn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="DmM-xL-pUa"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2ju-bW-i1a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1301.5999999999999" y="-566.26686656671666"/>
+        </scene>
+        <!--Form View Controller-->
+        <scene sceneID="gX9-GB-tv6">
+            <objects>
+                <viewController id="mvv-ei-cfo" userLabel="Form View Controller" customClass="FormViewController" customModule="Miawouf" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4YC-jd-Msn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f2E-7a-UBD">
+                                <rect key="frame" x="16" y="678" width="382" height="38"/>
+                                <color key="backgroundColor" red="0.67441487312316895" green="0.31048563122749329" blue="0.5448460578918457" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Valider">
+                                    <color key="titleColor" red="0.1588177979" green="0.69526034589999997" blue="0.79280287029999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="3J4-kd-1zy" kind="presentation" id="5Yr-j9-KyY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.71764705880000002" green="0.84313725490000002" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ZLq-3d-xDL" firstAttribute="trailing" secondItem="f2E-7a-UBD" secondAttribute="trailing" constant="16" id="aiO-zR-Tb2"/>
+                            <constraint firstItem="f2E-7a-UBD" firstAttribute="leading" secondItem="ZLq-3d-xDL" secondAttribute="leading" constant="16" id="hRC-Hz-RyK"/>
+                            <constraint firstItem="ZLq-3d-xDL" firstAttribute="bottom" secondItem="f2E-7a-UBD" secondAttribute="bottom" constant="20" id="i5u-6z-bvI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ZLq-3d-xDL"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hp8-hW-TcD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1293.5999999999999" y="112.89355322338831"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Miawouf" width="235" height="67"/>
+        <image name="Paw" width="242" height="229"/>
+    </resources>
+</document>
