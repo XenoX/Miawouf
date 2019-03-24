@@ -17,6 +17,9 @@
 		D52F015E2246EBBC00B7E4D2 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52F015D2246EBBC00B7E4D2 /* WelcomeViewController.swift */; };
 		D52F01602246F73B00B7E4D2 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52F015F2246F73B00B7E4D2 /* FormViewController.swift */; };
 		D52F01622246F74500B7E4D2 /* SuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52F01612246F74500B7E4D2 /* SuccessViewController.swift */; };
+		D52F01642248219A00B7E4D2 /* CatSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52F01632248219A00B7E4D2 /* CatSuccessViewController.swift */; };
+		D52F0166224821F900B7E4D2 /* CatWelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52F0165224821F900B7E4D2 /* CatWelcomeViewController.swift */; };
+		D52F01682248228600B7E4D2 /* CatFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52F01672248228600B7E4D2 /* CatFormViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,9 @@
 		D52F015D2246EBBC00B7E4D2 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		D52F015F2246F73B00B7E4D2 /* FormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
 		D52F01612246F74500B7E4D2 /* SuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessViewController.swift; sourceTree = "<group>"; };
+		D52F01632248219A00B7E4D2 /* CatSuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatSuccessViewController.swift; sourceTree = "<group>"; };
+		D52F0165224821F900B7E4D2 /* CatWelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatWelcomeViewController.swift; sourceTree = "<group>"; };
+		D52F01672248228600B7E4D2 /* CatFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatFormViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,9 +139,12 @@
 		D52F01582246D9C800B7E4D2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D52F01672248228600B7E4D2 /* CatFormViewController.swift */,
+				D52F0165224821F900B7E4D2 /* CatWelcomeViewController.swift */,
 				D52F015D2246EBBC00B7E4D2 /* WelcomeViewController.swift */,
 				D52F015F2246F73B00B7E4D2 /* FormViewController.swift */,
 				D52F01612246F74500B7E4D2 /* SuccessViewController.swift */,
+				D52F01632248219A00B7E4D2 /* CatSuccessViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -290,8 +299,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D52F015E2246EBBC00B7E4D2 /* WelcomeViewController.swift in Sources */,
+				D52F01682248228600B7E4D2 /* CatFormViewController.swift in Sources */,
+				D52F01642248219A00B7E4D2 /* CatSuccessViewController.swift in Sources */,
 				D52F012B2246D9AA00B7E4D2 /* AppDelegate.swift in Sources */,
 				D52F01602246F73B00B7E4D2 /* FormViewController.swift in Sources */,
+				D52F0166224821F900B7E4D2 /* CatWelcomeViewController.swift in Sources */,
 				D52F01622246F74500B7E4D2 /* SuccessViewController.swift in Sources */,
 				D52F015C2246DC6700B7E4D2 /* Races.swift in Sources */,
 			);

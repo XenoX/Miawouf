@@ -1,20 +1,25 @@
 //
-//  WelcomeViewController.swift
+//  CatSuccessViewController.swift
 //  Miawouf
 //
-//  Created by XenoX on 23/03/2019.
+//  Created by XenoX on 24/03/2019.
 //  Copyright © 2019 XenoX. All rights reserved.
 //
 
 import UIKit
 
-class WelcomeViewController: UIViewController {
+class CatSuccessViewController: UIViewController {
 
-    @IBAction func unwindToWelcome(segue: UIStoryboardSegue) { }
+    @IBAction func swipeDownDismiss(_ sender: UISwipeGestureRecognizer) {
+        dismiss(animated: true, completion: nil)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
     }
+    
 
     /*
     // MARK: - Navigation
@@ -25,4 +30,5 @@ class WelcomeViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+
 }
