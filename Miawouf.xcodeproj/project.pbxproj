@@ -20,6 +20,7 @@
 		D52F01642248219A00B7E4D2 /* CatSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52F01632248219A00B7E4D2 /* CatSuccessViewController.swift */; };
 		D52F0166224821F900B7E4D2 /* CatWelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52F0165224821F900B7E4D2 /* CatWelcomeViewController.swift */; };
 		D52F01682248228600B7E4D2 /* CatFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52F01672248228600B7E4D2 /* CatFormViewController.swift */; };
+		D58FA1B1224C286F0021BF6E /* Pet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58FA1B0224C286F0021BF6E /* Pet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		D52F01632248219A00B7E4D2 /* CatSuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatSuccessViewController.swift; sourceTree = "<group>"; };
 		D52F0165224821F900B7E4D2 /* CatWelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatWelcomeViewController.swift; sourceTree = "<group>"; };
 		D52F01672248228600B7E4D2 /* CatFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatFormViewController.swift; sourceTree = "<group>"; };
+		D58FA1B0224C286F0021BF6E /* Pet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +164,7 @@
 		D52F015A2246D9D700B7E4D2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D58FA1B0224C286F0021BF6E /* Pet.swift */,
 				D52F015B2246DC6600B7E4D2 /* Races.swift */,
 			);
 			path = Model;
@@ -235,13 +238,16 @@
 				TargetAttributes = {
 					D52F01262246D9AA00B7E4D2 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 					D52F013A2246D9AD00B7E4D2 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = D52F01262246D9AA00B7E4D2;
 					};
 					D52F01452246D9AD00B7E4D2 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = D52F01262246D9AA00B7E4D2;
 					};
 				};
@@ -301,6 +307,7 @@
 				D52F015E2246EBBC00B7E4D2 /* WelcomeViewController.swift in Sources */,
 				D52F01682248228600B7E4D2 /* CatFormViewController.swift in Sources */,
 				D52F01642248219A00B7E4D2 /* CatSuccessViewController.swift in Sources */,
+				D58FA1B1224C286F0021BF6E /* Pet.swift in Sources */,
 				D52F012B2246D9AA00B7E4D2 /* AppDelegate.swift in Sources */,
 				D52F01602246F73B00B7E4D2 /* FormViewController.swift in Sources */,
 				D52F0166224821F900B7E4D2 /* CatWelcomeViewController.swift in Sources */,
@@ -489,7 +496,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.xenox.Miawouf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -507,7 +514,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.xenox.Miawouf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -527,7 +534,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.xenox.MiawoufTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Miawouf.app/Miawouf";
 			};
@@ -548,7 +555,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.xenox.MiawoufTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Miawouf.app/Miawouf";
 			};
@@ -568,7 +575,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.xenox.MiawoufUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = Miawouf;
 			};
@@ -588,7 +595,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.xenox.MiawoufUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = Miawouf;
 			};

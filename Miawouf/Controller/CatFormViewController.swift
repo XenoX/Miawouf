@@ -8,23 +8,46 @@
 
 import UIKit
 
-class CatFormViewController: UIViewController {
+class CatFormViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate {
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var genderSegmentedControl: UISegmentedControl!
+    @IBOutlet weak var majoritySwitch: UISwitch!
+    @IBOutlet weak var phoneTextField: UITextField!
+    @IBOutlet weak var racePickerView: UIPickerView!
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
+        nameTextField.resignFirstResponder()
+        phoneTextField.resignFirstResponder()
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func validate() {
+        _ = createPetObject()
     }
-    */
 
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return catRaces.count
+    }
+
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return catRaces[row]
+    }
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+
+    private func createPetObject() -> Pet {
+        let gender: Pet.Gender = genderSegmentedControl.selectedSegmentIndex == 0 ? .male : .female
+        let race = catRaces[racePickerView.selectedRow(inComponent: 0)]
+        let hasMajority = majoritySwitch.isOn
+        let phone = phoneTextField.text
+        let name = nameTextField.text
+
+        return Pet(name: name, hasMajority: hasMajority, phone: phone, race: race, gender: gender)
+    }
 }
