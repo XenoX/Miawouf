@@ -193,7 +193,6 @@
                                 </state>
                                 <connections>
                                     <action selector="validate" destination="S8w-mL-rb9" eventType="touchUpInside" id="gWg-XG-IY7"/>
-                                    <segue destination="8V5-33-9XE" kind="presentation" id="TqY-ER-l1N"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -219,6 +218,7 @@
                         <outlet property="nameTextField" destination="cFD-KW-xYg" id="pxv-sQ-nwe"/>
                         <outlet property="phoneTextField" destination="2BR-33-DlH" id="ocf-k4-9NJ"/>
                         <outlet property="racePickerView" destination="rXM-WK-Q1z" id="hWM-cT-hl7"/>
+                        <segue destination="8V5-33-9XE" kind="presentation" identifier="segueToCatSuccess" id="JBY-5K-6qE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ysu-vS-DWw" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -278,6 +278,9 @@ Vous avez bien été ajouté à notre base de données ! Nous vous enverrons un 
                             <outletCollection property="gestureRecognizers" destination="nVP-Of-FQE" appends="YES" id="4UY-kS-3AS"/>
                         </connections>
                     </view>
+                    <connections>
+                        <outlet property="welcomeLabel" destination="fIA-Di-etp" id="4l6-hY-WFW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z1L-6R-e9V" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="wHD-hL-oGl" userLabel="Exit" sceneMemberID="exit"/>
@@ -359,7 +362,7 @@ Vous avez bien été ajouté à notre base de données ! Nous vous enverrons un 
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qHT-AI-6DW">
                                 <rect key="frame" x="16" y="20" width="382" height="638"/>
                                 <gestureRecognizers/>
-                                <string key="text">Wouf ! 
+                                <string key="text">Wouf de bienvenue à NAME !
 
 Vous avez bien été ajouté à notre base de données ! Nous vous enverrons un SMS dès que nous avons une âme soeur à vous proposer !</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
@@ -397,6 +400,9 @@ Vous avez bien été ajouté à notre base de données ! Nous vous enverrons un 
                             <outletCollection property="gestureRecognizers" destination="ifM-gF-T3m" appends="YES" id="KKD-XV-XsS"/>
                         </connections>
                     </view>
+                    <connections>
+                        <outlet property="welcomeLabel" destination="qHT-AI-6DW" id="eTG-rd-0Be"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2ju-bW-i1a" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="NhI-VV-4WL" userLabel="Exit" sceneMemberID="exit"/>
@@ -429,7 +435,6 @@ Vous avez bien été ajouté à notre base de données ! Nous vous enverrons un 
                                 </state>
                                 <connections>
                                     <action selector="validate" destination="mvv-ei-cfo" eventType="touchUpInside" id="wyX-AX-ra4"/>
-                                    <segue destination="3J4-kd-1zy" kind="presentation" id="6Xl-CG-0iA"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="s4a-CD-7uk" userLabel="Form Stack View">
@@ -536,6 +541,7 @@ Vous avez bien été ajouté à notre base de données ! Nous vous enverrons un 
                         <outlet property="nameTextField" destination="Sl6-7h-Usm" id="bhL-OS-BB4"/>
                         <outlet property="phoneTextField" destination="Q5y-KB-z1g" id="lqb-0F-6Tt"/>
                         <outlet property="racePickerView" destination="J33-rG-25d" id="rwc-Bq-8aE"/>
+                        <segue destination="3J4-kd-1zy" kind="presentation" identifier="segueToSuccess" id="mfU-az-bhV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hp8-hW-TcD" userLabel="First Responder" sceneMemberID="firstResponder"/>

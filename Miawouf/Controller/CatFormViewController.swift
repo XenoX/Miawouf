@@ -8,22 +8,52 @@
 
 import UIKit
 
-class CatFormViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate {
+class CatFormViewController: UIViewController {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var genderSegmentedControl: UISegmentedControl!
     @IBOutlet weak var majoritySwitch: UISwitch!
     @IBOutlet weak var phoneTextField: UITextField!
     @IBOutlet weak var racePickerView: UIPickerView!
 
-    @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
-        nameTextField.resignFirstResponder()
-        phoneTextField.resignFirstResponder()
-    }
+    var cat: Pet!
+}
 
+extension CatFormViewController {
     @IBAction func validate() {
-        _ = createPetObject()
+        createPetObject()
+        checkPetStatus()
     }
 
+    private func createPetObject() {
+        let gender: Pet.Gender = genderSegmentedControl.selectedSegmentIndex == 0 ? .male : .female
+        let race = catRaces[racePickerView.selectedRow(inComponent: 0)]
+        let hasMajority = majoritySwitch.isOn
+        let phone = phoneTextField.text
+        let name = nameTextField.text
+
+        cat = Pet(name: name, hasMajority: hasMajority, phone: phone, race: race, gender: gender)
+    }
+
+    private func checkPetStatus() {
+        switch cat.status {
+        case .accepted:
+            performSegue(withIdentifier: "segueToCatSuccess", sender: nil)
+        case .rejected(let error):
+            presentAlert(with: error)
+        }
+    }
+
+    private func presentAlert(with error: String) {
+        let alert = UIAlertController(title: "Error", message: error, preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+
+        alert.addAction(action)
+
+        present(alert, animated: true, completion: nil)
+    }
+}
+
+extension CatFormViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -35,19 +65,27 @@ class CatFormViewController: UIViewController, UIPickerViewDataSource, UIPickerV
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return catRaces[row]
     }
+}
+
+extension CatFormViewController: UITextFieldDelegate {
+    @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
+        nameTextField.resignFirstResponder()
+        phoneTextField.resignFirstResponder()
+    }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }
+}
 
-    private func createPetObject() -> Pet {
-        let gender: Pet.Gender = genderSegmentedControl.selectedSegmentIndex == 0 ? .male : .female
-        let race = catRaces[racePickerView.selectedRow(inComponent: 0)]
-        let hasMajority = majoritySwitch.isOn
-        let phone = phoneTextField.text
-        let name = nameTextField.text
+extension CatFormViewController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == "segueToCatSuccess" else {
+            return
+        }
 
-        return Pet(name: name, hasMajority: hasMajority, phone: phone, race: race, gender: gender)
+        let successVC = segue.destination as! CatSuccessViewController
+        successVC.cat = cat
     }
 }

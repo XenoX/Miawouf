@@ -10,25 +10,28 @@ import UIKit
 
 class CatSuccessViewController: UIViewController {
 
+    @IBOutlet weak var welcomeLabel: UILabel!
+
+    var cat: Pet!
+
     @IBAction func swipeDownDismiss(_ sender: UISwipeGestureRecognizer) {
         dismiss(animated: true, completion: nil)
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setWelcomeLabel()
     }
-    
 
-    /*
-    // MARK: - Navigation
+    private func setWelcomeLabel() {
+        guard let name = cat.name else {
+            return
+        }
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        welcomeLabel.text = """
+            Miaou de bienvenue à \(name) !
+
+            Vous avez bien été ajouté à notre base de données ! Nous vous enverrons un SMS dès que nous avons une âme soeur à vous proposer !
+        """
     }
-    */
-
 }
